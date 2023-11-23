@@ -7,7 +7,6 @@
     /WEBII-PROJECT | BUY YOUR HOME E-COMMERCE PLATFORM
     |-- /frontend
     |   |-- /public            # Static files served directly to the client
-    |   |   |-- index.html     # Main HTML file
     |   |   |-- favicon.ico    # Favicon icon
     |   |   |-- ...
     |   |

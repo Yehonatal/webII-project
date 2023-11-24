@@ -9,6 +9,7 @@
 ![](Design/hero.png)
 ![](Design/properties.png)
 ![](Design/contact.png)
+![](Design/productpage.png)
 
 ### Possible Relational Database Design
 

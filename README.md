@@ -130,6 +130,7 @@
     |   |           |-- contracts.php  # Route handling buyer contracts
     |   |
     |   |-- /includes
+    |       |-- config.php         # Configuration file for settings
     |       |-- db.php             # Database connection
     |       |-- functions.php      # Common functions
     |   |-- /uploads   # Directory for storing uploaded images

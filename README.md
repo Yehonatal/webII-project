@@ -10,6 +10,7 @@
 ![](Design/properties.png)
 ![](Design/contact.png)
 ![](Design/productpage.png)
+![](Design/Home%20_%20add_new_house.png)
 
 ### Possible Relational Database Design
 

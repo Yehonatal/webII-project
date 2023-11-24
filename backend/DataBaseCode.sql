@@ -69,3 +69,4 @@ CREATE TABLE Contracts (
     FOREIGN KEY (buyer_id) REFERENCES Buyers(buyer_id),
     FOREIGN KEY (product_id) REFERENCES Products(product_id)
 );
+

@@ -29,14 +29,12 @@
     - `seller_id` (Primary Key, Foreign Key referencing Users)
     - `company_name` (if applicable)
     - `contact_number`
-    - `other_seller_details`
 
 3. **Buyers:**
 
     - `buyer_id` (Primary Key, Foreign Key referencing Users)
     - `full_name`
     - `contact_number`
-    - `other_buyer_details`
 
 4. **Products:**
 

@@ -111,7 +111,7 @@
     |   |   |-- index.php          # Entry point for the API
     |   |   |
     |   |   |-- /routes
-    |   |       |-- /users
+    |   |       |-- [Done] /users
     |   |       |   |-- index.php  # Route handling user-related API requests
     |   |       |   |-- register.php  # Route handling user registration
     |   |       |   |-- login.php  # Route handling user login
@@ -137,6 +137,7 @@
     |       |-- /images
     |           |-- /product_images
     |			|--/user_images
+    |
     |-- README.md                  # Project-wide documentation
     |-- .gitignore                 # Specifies files and directories to ignore in version control
     |-- ...

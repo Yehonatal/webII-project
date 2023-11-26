@@ -25,7 +25,7 @@ switch ($method) {
     case 'POST':
         $action = isset($user->action) ? $user->action : '';
         if ($action === 'Register') {
-            $regObject->Register($user, $conn);
+            $regObject->registerUser($user, $conn);
         } elseif ($action === 'Login') {
             $loginObject->Login($user, $conn);
         } else {

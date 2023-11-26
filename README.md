@@ -118,14 +118,14 @@
     |   |       |
     |   |       |-- /sellers
     |   |       |   |-- index.php  # Route handling seller-related API requests
-    |   |       |   |-- create.php  # Route handling seller registration
+    |   |       |   |-- [Done] create.php  # Route handling seller registration
     |   |       |   |-- products.php  # Route handling seller products
     |   |       |   |-- bids.php  # Route handling seller bids
     |   |       |   |-- contracts.php  # Route handling seller contracts
     |   |       |
     |   |       |-- /buyers
     |   |           |-- index.php  # Route handling buyer-related API requests
-    |   |           |-- create.php  # Route handling buyer registration
+    |   |           |-- [Done] create.php  # Route handling buyer registration
     |   |           |-- bids.php  # Route handling buyer bids
     |   |           |-- contracts.php  # Route handling buyer contracts
     |   |

@@ -12,8 +12,6 @@ class login
             return;
         }
 
-        echo "Here!";
-
         $sql = "SELECT username, password FROM Users WHERE username = :username";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':username', $user->username);

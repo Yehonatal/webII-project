@@ -11,9 +11,9 @@ CREATE TABLE Users (
     password VARCHAR(255),
     email VARCHAR(255),
     role VARCHAR(50),
-    user_image_url VARCHAR(255)
+    user_image_url VARCHAR(255),
+    contact_number VARCHAR(20)   
 );
-
 -- Create the Sellers Table
 CREATE TABLE Sellers (
     seller_id INT PRIMARY KEY,

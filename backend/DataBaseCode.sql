@@ -10,7 +10,8 @@ CREATE TABLE Users (
     username VARCHAR(255),
     password VARCHAR(255),
     email VARCHAR(255),
-    role VARCHAR(50)
+    role VARCHAR(50),
+    user_image_url VARCHAR(255)
 );
 
 -- Create the Sellers Table

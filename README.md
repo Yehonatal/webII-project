@@ -135,7 +135,7 @@
     |   |-- /uploads   # Directory for storing uploaded images
     |       |-- /images
     |           |-- /product_images
-    |			|--/user_images
+    |			|-- /user_images
     |
     |-- README.md                  # Project-wide documentation
     |-- .gitignore                 # Specifies files and directories to ignore in version control

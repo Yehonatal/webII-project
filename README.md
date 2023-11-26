@@ -112,9 +112,9 @@
     |   |   |
     |   |   |-- /routes
     |   |       |-- [Done] /users
-    |   |       |   |-- index.php  # Route handling user-related API requests
-    |   |       |   |-- register.php  # Route handling user registration
-    |   |       |   |-- login.php  # Route handling user login
+    |   |       |   |-- [Done] index.php  # Route handling user-related API requests
+    |   |       |   |-- [Done] register.php  # Route handling user registration
+    |   |       |   |-- [Done] login.php  # Route handling user login
     |   |       |
     |   |       |-- /sellers
     |   |       |   |-- index.php  # Route handling seller-related API requests
@@ -129,9 +129,8 @@
     |   |           |-- bids.php  # Route handling buyer bids
     |   |           |-- contracts.php  # Route handling buyer contracts
     |   |
-    |   |-- /includes
-    |       |-- config.php         # Configuration file for settings
-    |       |-- db.php             # Database connection
+    |   |-- [Done] /includes
+    |       |-- [Done] db.php             # Database connection
     |       |-- functions.php      # Common functions
     |   |-- /uploads   # Directory for storing uploaded images
     |       |-- /images

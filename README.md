@@ -23,6 +23,8 @@
     - `password` (hashed)
     - `email`
     - `role` (to distinguish between sellers and buyers)
+    - `user_image_url`
+    - `contact_number`
 
 2. **Sellers:**
 

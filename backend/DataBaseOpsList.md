@@ -145,3 +145,19 @@
     FROM Bids
     WHERE Bids.product_id = 1; -- Replace 1 with the actual product_id
     ```
+
+18. **Retrieve all the details about a users based on there role **
+
+    ```sql
+    SELECT Users.*, Sellers.*
+    FROM Users
+    LEFT JOIN Sellers ON Users.user_id = Sellers.user_id
+    WHERE Users.username = 'username' AND Users.password = 'password' AND Users.role = 'seller'; --Replace the 2 with the actual user info
+    ```
+
+    ```sql
+    SELECT Users.*, Buyers.*
+    FROM Users
+    LEFT JOIN Buyers ON Users.user_id = Buyers.user_id
+    WHERE Users.username = 'username' AND Users.password = 'password' AND Users.role = 'buyer'; -- Replace the 2 with the actual user info
+    ```

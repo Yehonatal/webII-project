@@ -6,7 +6,6 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: *");
 
-echo "Testing from Users!";
 
 include __DIR__ . "/../../includes/DbConnect.php"; // Use an absolute path
 

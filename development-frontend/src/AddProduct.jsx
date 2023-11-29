@@ -1,23 +1,22 @@
 import { useState } from "react";
 import axios from "axios";
-// import { useNavigate } from "react-router-dom";
-// import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useUser } from "./UserContext";
 
 const AddProduct = () => {
+    const { userData } = useUser();
+
     const [inputs, setInputs] = useState({
         action: "create_product",
         name: "",
         house_type: "",
         product_id: "",
-        company: "Yehona Limited Corp",
-        seller_id: "2763",
+        company: userData.company_name,
+        seller_id: userData.seller_id,
         product_detail: "",
         product_price: "",
     });
-    // const navigate = useNavigate();
-    // const location = useLocation();
-    // const userData = location.state.userData;
-    // console.log(userData);
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const name = e.target.name;
@@ -46,7 +45,7 @@ const AddProduct = () => {
                 )
                 .then(function (response) {
                     console.log(response.data);
-                    // navigate("/dashboard");
+                    navigate("/dashboard");
                 });
         } catch (error) {
             console.error("Error creating user:", error);
@@ -54,7 +53,7 @@ const AddProduct = () => {
     };
     return (
         <div>
-            <h1>DEMO REAL-STATE</h1>
+            <h1>{userData.company_name}</h1>
             <form onSubmit={(e) => handleSubmit(e)}>
                 <label htmlFor="name">NAME</label>
                 <input
@@ -74,10 +73,10 @@ const AddProduct = () => {
                     PRODUCT ID: <span>GENERATED</span>
                 </h4>
                 <h4>
-                    COMPANY: <span>DEMO REAL-STATE</span>
+                    COMPANY: <span>{userData.company_name.toUpperCase()}</span>
                 </h4>
                 <h4>
-                    SELLER ID: <span>GENERATED</span>
+                    SELLER ID: <span>{userData.seller_id}</span>
                 </h4>
                 <label htmlFor="email">DESCRIPTION</label>
                 <input

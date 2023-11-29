@@ -1,10 +1,10 @@
-import { useLocation } from "react-router-dom";
+import { useUser } from "./UserContext";
 import { Link } from "react-router-dom";
 
 const DashBoard = () => {
-    const location = useLocation();
-    const userData = location.state.userData;
-    // console.log(userData);
+    const { userData } = useUser();
+    console.log(userData);
+
     return (
         <div>
             {userData.role == "seller" ? (

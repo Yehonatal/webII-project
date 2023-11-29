@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./App.css";
 import { useNavigate } from "react-router-dom";
-
+import { useUser } from "./UserContext";
 const App = () => {
     const [inputs, setInputs] = useState({
         action: "Login",
@@ -12,15 +12,14 @@ const App = () => {
     });
     // const [userData, setUserData] = useState(null);
     const navigate = useNavigate();
-
+    const { setUser } = useUser();
     const handleSubmit = async (e) => {
         e.preventDefault();
         await axios
             .post("http://localhost/backend/api/routes/users/index.php", inputs)
             .then((Response) => {
-                navigate("/dashboard", {
-                    state: { userData: Response.data.userData },
-                });
+                setUser(Response.data.userData);
+                navigate("/dashboard");
             });
     };
 

@@ -15,14 +15,7 @@ const DashBoard = () => {
                         <ul>
                             <li>
                                 <button>
-                                    <Link
-                                        to={{
-                                            pathname: "/addProduct",
-                                            state: { userData: userData },
-                                        }}
-                                    >
-                                        ADD PRODUCT
-                                    </Link>
+                                    <Link to="/addProduct">ADD PRODUCT</Link>
                                 </button>
                             </li>
                         </ul>

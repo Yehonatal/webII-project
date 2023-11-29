@@ -16,10 +16,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <UserProvider>
                 <Routes>
                     <Route path="/" Component={LandingPage} />
-                    <Route path="/login" Component={Login} />
                     <Route path="/register" Component={Register} />
+                    <Route path="/login" Component={Login} />
                     <Route path="/addProduct" Component={AddProduct} />
-                    <Route path="/dashboard" Component={DashBoard} />
                     <Route path="/dashboard" Component={DashBoard} />
                     <Route path="/product" Component={Product} />
                     <Route path="/bid" Component={SendBid} />

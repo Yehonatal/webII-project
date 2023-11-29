@@ -33,7 +33,7 @@ const App = () => {
 
     return (
         <div>
-            <h1>Login </h1>
+            <h1>LOGIN </h1>
             <form onSubmit={(e) => handleSubmit(e)}>
                 <label htmlFor="name">Username</label>
                 <input

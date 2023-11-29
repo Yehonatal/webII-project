@@ -1,15 +1,47 @@
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const DashBoard = () => {
     const location = useLocation();
     const userData = location.state.userData;
-
+    // console.log(userData);
     return (
         <div>
             {userData.role == "seller" ? (
-                <h1>Dashboard</h1>
+                <>
+                    <p>DASHBOARD</p>
+                    <h1>{userData.company_name}</h1>
+                    <div>
+                        <ul>
+                            <li>
+                                <button>
+                                    <Link
+                                        to={{
+                                            pathname: "/addProduct",
+                                            state: { userData: userData },
+                                        }}
+                                    >
+                                        ADD PRODUCT
+                                    </Link>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </>
             ) : (
-                <h1>Market Place</h1>
+                <div>
+                    <h1>MARKET PLACE</h1>
+
+                    <div>
+                        <ul>
+                            <li>
+                                <button>
+                                    <Link to="/product">PRODUCT</Link>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             )}
             <div>
                 <strong>User ID:</strong> {userData.user_id} <br />
@@ -20,6 +52,7 @@ const DashBoard = () => {
                 <br />
                 {userData.company_name && (
                     <div>
+                        <strong>Seller ID:</strong> {userData.seller_id} <br />
                         <strong>Company Name:</strong> {userData.company_name}{" "}
                         <br />
                     </div>

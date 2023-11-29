@@ -1,7 +1,5 @@
 <?php
 
-
-
 class RegisterSeller
 {
     public function registerSeller($user_id, $contact_number, $company_name, $conn)

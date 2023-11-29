@@ -119,9 +119,9 @@
     |   |       |   |-- [Done] login.php  # Route handling user login
     |   |       |
     |   |       |-- /sellers
-    |   |       |   |-- index.php  # Route handling seller-related API requests
+    |   |       |   |-- [Done] index.php  # Route handling seller-related API requests
     |   |       |   |-- [Done] create.php  # Route handling seller registration
-    |   |       |   |-- products.php  # Route handling seller products
+    |   |       |   |-- [Done] products.php  # Route handling seller products
     |   |       |   |-- bids.php  # Route handling seller bids
     |   |       |   |-- contracts.php  # Route handling seller contracts
     |   |       |

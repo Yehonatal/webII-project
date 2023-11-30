@@ -1,9 +1,11 @@
+import Product from "./Product";
+import ProductAtSeller from "./ProductAtSeller";
 import { useUser } from "./UserContext";
 import { Link } from "react-router-dom";
 
 const DashBoard = () => {
     const { userData } = useUser();
-    console.log(userData);
+    // console.log(userData);
 
     return (
         <div>
@@ -11,29 +13,10 @@ const DashBoard = () => {
                 <>
                     <p>DASHBOARD</p>
                     <h1>{userData.company_name}</h1>
-                    <div>
-                        <ul>
-                            <li>
-                                <button>
-                                    <Link to="/addProduct">ADD PRODUCT</Link>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
                 </>
             ) : (
                 <div>
                     <h1>MARKET PLACE</h1>
-
-                    <div>
-                        <ul>
-                            <li>
-                                <button>
-                                    <Link to="/product">PRODUCT</Link>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             )}
             <div>
@@ -51,6 +34,29 @@ const DashBoard = () => {
                     </div>
                 )}
             </div>
+            {userData.role == "seller" ? (
+                <>
+                    <div>
+                        <ProductAtSeller />
+                        <hr />
+                        <ul>
+                            <li>
+                                <button>
+                                    <Link to="/addProduct">ADD PRODUCT</Link>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </>
+            ) : (
+                <div>
+                    <hr />
+
+                    <div>
+                        <Product />
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

@@ -113,3 +113,9 @@ li img {
     width: 100%;
     object-fit: fit;
 }
+
+.product {
+    border: 2px solid white;
+    margin-top: 1em;
+    padding: 1em;
+}

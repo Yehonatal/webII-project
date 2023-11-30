@@ -13,25 +13,26 @@
         |   |   |
         |   |   |-- /routes
         |   |       |-- [Done] /users
-        |   |       |   |-- [Done] index.php  # Route handling user-related API requests
-        |   |       |   |-- [Done] register.php  # Route handling user registration
-        |   |       |   |-- [Done] login.php  # Route handling user login
+        |   |       |   |-- index.php  # Route handling user-related API requests
+        |   |       |   |-- register.php  # Route handling user registration
+        |   |       |   |-- login.php  # Route handling user login
         |   |       |
-        |   |       |-- [Done] /sellers
-        |   |       |   |-- [Done] index.php  # Route handling seller-related API requests
-        |   |       |   |-- [Done] create.php  # Route handling seller registration
-        |   |       |   |-- [Done] products.php  # Route handling seller products
+        |   |       |-- /sellers
+        |   |       |   |-- index.php  # Route handling seller-related API requests
+        |   |       |   |-- create.php  # Route handling seller registration
+        |   |       |   |-- products.php  # Route handling seller products
         |   |       |   |-- bids.php  # Route handling seller bids
         |   |       |   |-- contracts.php  # Route handling seller contracts
         |   |       |
         |   |       |-- /buyers
         |   |           |-- index.php  # Route handling buyer-related API requests
-        |   |           |-- [Done] create.php  # Route handling buyer registration
+        |   |           |-- create.php  # Route handling buyer registration
         |   |           |-- bids.php  # Route handling buyer bids
         |   |           |-- contracts.php  # Route handling buyer contracts
         |   |
-        |   |-- [Done] /includes
-        |       |-- [Done] db.php             # Database connection
+        |   |-- /includes
+        |       |-- config.php         # Configuration file for settings
+        |       |-- db.php             # Database connection
         |       |-- functions.php      # Common functions
         |   |-- /uploads   # Directory for storing uploaded images
         |       |-- /images

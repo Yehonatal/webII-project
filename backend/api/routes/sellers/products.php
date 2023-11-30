@@ -6,10 +6,10 @@ class products
 
     public function createProduct($user, $conn)
     {
-        
+
         try {
             $user->product_id = $this->generateUniqueUserId($conn);
-    
+
             $sql = "INSERT INTO Products(product_id, seller_id, name, description, price, status, product_type, image_url) 
                         VALUES(:product_id, :seller_id, :name, :description, :price, :status, :product_type, :image_url)";
             $status = "available";
@@ -22,7 +22,7 @@ class products
             $stmt->bindParam(':status', $status);
             $stmt->bindParam(':product_type', $user->house_type);
             $stmt->bindParam(':image_url', $user->user_image_url);
-    
+
             if ($stmt->execute()) {
                 $response = ['status' => 1, 'message' => 'Product Record created successfully.'];
             } else {
@@ -33,6 +33,28 @@ class products
             echo "Error: " . $e->getMessage();
         }
     }
+
+    public function getSellerProducts($user, $conn)
+    {
+        $sql = "SELECT Products.* FROM Products WHERE Products.seller_id = " . $user->seller_id;
+
+        $stmt = $conn->prepare($sql);
+
+        if (!$stmt->execute()) {
+            $response = ['status' => 0, 'message' => 'Failed to get product data.'];
+        }
+
+        $productsData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        if ($productsData) {
+            $response = ['status' => 1, 'message' => 'Getting products successful.', 'productsData' => $productsData];
+        } else {
+            $response = ['status' => 0, 'message' => 'Failed to get product data.'];
+        }
+
+        echo json_encode($productsData);
+    }
+
 
     private function generateUniqueUserId($conn): int
     {

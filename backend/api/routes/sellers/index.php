@@ -25,6 +25,8 @@ switch ($method) {
             $prodObject->createProduct($user, $conn);
         } elseif ($action === 'create_contract') {
             $contObject->createContract($user, $conn);
+        } elseif ($action === 'get_products') {
+            $prodObject->getSellerProducts($user, $conn);
         } else {
             $response = ['status' => 0, 'message' => 'Invalid action.'];
             echo json_encode($response);

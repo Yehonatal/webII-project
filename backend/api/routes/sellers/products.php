@@ -52,7 +52,12 @@ class products
             $response = ['status' => 0, 'message' => 'Failed to get product data.'];
         }
 
-        echo json_encode($productsData);
+        echo json_encode($response);
+    }
+
+    public function getAllAvailableProducts($user, $conn)
+    {
+        echo json_encode("From get all the available products method");
     }
 
 

@@ -20,7 +20,7 @@ const ProductAtSeller = () => {
                     "http://localhost/backend/api/routes/sellers/index.php",
                     sellerInfo
                 );
-                setSellerProducts(response.data);
+                setSellerProducts(response.data.productsData);
                 console.log(sellerProducts);
             } catch (error) {
                 console.error("Error getting seller products", error);

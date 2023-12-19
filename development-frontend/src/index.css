@@ -63,6 +63,9 @@ button:focus-visible {
     button {
         background-color: #f9f9f9;
     }
+    .product {
+        border-color: #213547;
+    }
 }
 
 ul {
@@ -73,4 +76,10 @@ ul {
 
 ul li {
     list-style-type: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }

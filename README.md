@@ -122,14 +122,15 @@
     |   |       |   |-- [Done] index.php  # Route handling seller-related API requests
     |   |       |   |-- [Done] create.php  # Route handling seller registration
     |   |       |   |-- [Done] products.php  # Route handling seller products
-    |   |       |   |-- bids.php  # Route handling seller bids
     |   |       |   |-- contracts.php  # Route handling seller contracts
+    |   |       |   |-- bids.php  # Route handling sellers acquired bids
     |   |       |
     |   |       |-- /buyers
-    |   |           |-- index.php  # Route handling buyer-related API requests
-    |   |           |-- [Done] create.php  # Route handling buyer registration
-    |   |           |-- bids.php  # Route handling buyer bids
-    |   |           |-- contracts.php  # Route handling buyer contracts
+    |   |           |-- [Done] index.php  # Route handling buyer-related API requests
+    |   |           |-- [Done] create.php   # Route handling buyer registration
+    |   |           |-- [Done] bids.php  # Route handling buyer bids
+    |   |           |-- [Done] products.php # Route handling all available products
+    |   |
     |   |
     |   |-- [Done] /includes
     |       |-- [Done] db.php             # Database connection

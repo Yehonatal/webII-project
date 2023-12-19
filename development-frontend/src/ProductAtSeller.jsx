@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { useUser } from "./UserContext";
+import GetBids from "./Bids";
 import axios from "axios";
 
 const ProductAtSeller = () => {
@@ -30,6 +31,9 @@ const ProductAtSeller = () => {
 
     return (
         <>
+            <hr />
+            <h2>Current Available Bids</h2>
+            <GetBids seller_id={userData.seller_id} />
             <hr />
             <h2>ProductAtSeller</h2>
             <hr />

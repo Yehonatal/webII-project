@@ -21,8 +21,7 @@
         |   |       |   |-- [Done] index.php  # Route handling seller-related API requests
         |   |       |   |-- [Done] create.php  # Route handling seller registration
         |   |       |   |-- [Done] products.php  # Route handling seller products
-        |   |       |   |-- contracts.php  # Route handling seller contracts
-        |   |           |-- bids.php  # Route handling sellers acquired bids
+        |   |       |   |-- [Done] contracts.php  # Route handling seller contracts
         |   |       |
         |   |       |-- /buyers
         |   |           |-- [Done] index.php  # Route handling buyer-related API requests

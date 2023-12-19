@@ -119,6 +119,11 @@ li img {
     margin-top: 1em;
     padding: 1em;
 }
+.bids {
+    border: 2px solid green;
+    margin-top: 1em;
+    padding: 1em;
+}
 
 h1,
 h2,

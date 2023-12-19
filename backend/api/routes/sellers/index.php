@@ -28,7 +28,11 @@ switch ($method) {
         } elseif ($action === 'get_products') {
             $prodObject->getSellerProducts($user, $conn);
         } elseif ($action === 'get_all_products') {
-            $prodObject->getAllAvailableProducts($user, $conn);
+            $prodObject->getAllAvailableProducts($conn);
+        } elseif ($action === 'get_all_bids') {
+            $contObject->getAllBids($user, $conn);
+        } elseif ($action === 'submit_contract') {
+            $contObject->createContract($user, $conn);
         } else {
             $response = ['status' => 0, 'message' => 'Invalid action.'];
             echo json_encode($response);

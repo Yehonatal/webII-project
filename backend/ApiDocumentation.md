@@ -11,19 +11,19 @@
     -   Content-Type: application/json
     -   Body:
 
-                    ```json
-                    {
-                        "action": "Register",
-                        "full_name": "Full Name",
-                        "username": "Username",
-                        "company_name": "Company Name",
-                        "email": "email@gmail.com",
-                        "password": "password",
-                        "role": "user_role",
-                        "contact_number": "Contact Number",
-                        "user_image_url": "Uploaded File" // Note: File upload should be handled appropriately
-                    }
-                    ```
+                        ```json
+                        {
+                            "action": "Register",
+                            "full_name": "Full Name",
+                            "username": "Username",
+                            "company_name": "Company Name",
+                            "email": "email@gmail.com",
+                            "password": "password",
+                            "role": "user_role",
+                            "contact_number": "Contact Number",
+                            "user_image_url": "Uploaded File" // Note: File upload should be handled appropriately
+                        }
+                        ```
 
 -   **Request Example:**
 
@@ -59,14 +59,14 @@
     -   Content-Type: application/json
     -   Body:
 
-                    ```json
-                    {
-                        "action": "Login",
-                        "username": "Username",
-                        "password": "password",
-                        "role": "user_role"
-                    }
-                    ```
+                        ```json
+                        {
+                            "action": "Login",
+                            "username": "Username",
+                            "password": "password",
+                            "role": "user_role"
+                        }
+                        ```
 
 -   **Request Example:**
 
@@ -121,18 +121,18 @@
     -   Content-Type: application/json
     -   Body:
 
-                        ```json
-                        {
-                            "action": "create_product",
-                            "name": "Product Name",
-                            "house_type": "House Type",
-                            "company": "Company Name",
-                            "seller_id": "Seller ID",
-                            "product_detail": "Detail about product",
-                            "product_price": "Lowest Bid",
-                            "user_image_url": "Uploaded File"
-                        }
-                        ```
+                            ```json
+                            {
+                                "action": "create_product",
+                                "name": "Product Name",
+                                "house_type": "House Type",
+                                "company": "Company Name",
+                                "seller_id": "Seller ID",
+                                "product_detail": "Detail about product",
+                                "product_price": "Lowest Bid",
+                                "user_image_url": "Uploaded File"
+                            }
+                            ```
 
 -   **Request Example:**W
 
@@ -178,11 +178,11 @@
     -   Content-Type: application/json
     -   Body:
 
-                ```json
-                {
-                    "action": "get_all_products"
-                }
-                ```
+                    ```json
+                    {
+                        "action": "get_all_products"
+                    }
+                    ```
 
 -   **Request Example:**
 
@@ -241,12 +241,12 @@
     -   Content-Type: application/json
     -   Body:
 
-                ```json
-                {
-                    "action": "get_products",
-                    "seller_id": "Seller ID"
-                }
-                ```
+                    ```json
+                    {
+                        "action": "get_products",
+                        "seller_id": "Seller ID"
+                    }
+                    ```
 
 -   **Request Example:**
 
@@ -359,3 +359,46 @@
     "message": "Bid placed successfully."
 }
 ```
+
+### 5. Get All Bids for a Seller
+
+-   **Endpoint:** `/backend/api/routes/sellers/index.php`
+-   **Method:** POST
+-   **Request Payload:**
+    ```json
+    {
+        "action": "get_all_bids",
+        "seller_id": 123
+    }
+    ```
+-   **Response:**
+    ```json
+    {
+      "status": 1,
+      "message": "Getting bids successful.",
+      "productsData": [...]
+    }
+    ```
+
+### 6. Submit Contract
+
+-   **Endpoint:** `/backend/api/routes/sellers/index.php`
+-   **Method:** POST
+-   **Request Payload:**
+    ```json
+    {
+        "action": "submit_contract",
+        "seller_id": 123,
+        "buyer_id": 456,
+        "product_id": 789,
+        "contract_details": "Contract details here"
+    }
+    ```
+-   **Response:**
+    ```json
+    {
+      "status": 1,
+      "message": "Contract submitted successfully.",
+      "contractData": {...}
+    }
+    ```

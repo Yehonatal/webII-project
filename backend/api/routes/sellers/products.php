@@ -55,10 +55,7 @@ class products
         echo json_encode($response);
     }
 
-    public function getAllAvailableProducts($user, $conn)
-    {
-        echo json_encode("From get all the available products method");
-    }
+
 
 
     private function generateUniqueUserId($conn): int
